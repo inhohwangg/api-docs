@@ -1,18 +1,34 @@
 const express = require('express')
 const router = express.Router()
 
+// routes/user.js
 /**
  * @swagger
- * /api/v1/test:
+ * /api/v1/users:
  *   get:
- *     summary: 테스트 엔드포인트
- *     description: 이 엔드포인트는 간단한 테스트를 위해 사용됩니다.
+ *     summary: 사용자 목록 조회
  *     responses:
  *       200:
- *         description: 성공적으로 응답을 반환합니다.
+ *         description: 성공
  */
-router.get('/api/v1/test', (req, res) => {
-	res.status(200).json({ message: 'Test endpoint' });
+router.get('/api/v1/users', (req, res) => {
+	// 사용자 목록을 반환하는 로직
+	res.send('users');
+});
+
+// routes/order.js
+/**
+ * @swagger
+ * /api/v1/orders:
+ *   get:
+ *     summary: 주문 목록 조회
+ *     responses:
+ *       200:
+ *         description: 성공
+ */
+router.get('/api/v1/orders', (req, res) => {
+	// 주문 목록을 반환하는 로직
+	res.send('orders');
 });
 
 module.exports = router;
