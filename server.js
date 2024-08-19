@@ -12,15 +12,13 @@ app.use(bodyParser.urlencoded({ extended: true }));  // URL-encoded 형식의 �
 // 라우트
 const routes = require('./routes/index.js')
 app.use(routes)
-app.use('/api/webhook', webhook);
+app.use(webhook);
 
 // Redoc 를 사용하여 API 문서화 제공
 app.get('/', redoc({
 	title: 'API Docs',
 	specUrl: '/swagger.json',
 }))
-
-//
 
 // OpenAPI 스펙을 JSON 형식으로 제공
 app.get('/swagger.json', (req, res) => {
