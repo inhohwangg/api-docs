@@ -4,19 +4,19 @@ const swaggerOptions = {
 	swaggerDefinition: {
 		openapi: '3.0.0',
 		info: {
-			title: 'My API Documentation',
+			title: 'API 문서',
 			version: '1.0.0',
-			description: 'API documentation using Redoc and OpenAPI 3.0',
-			termsOfService: 'http://example.com/terms/',
-			contact: {
-				name: 'API Support',
-				url: 'http://example.com/support',
-				email: 'support@example.com'
-			},
-			license: {
-				name: 'Apache 2.0',
-				url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
-			}
+			description: 'API 문서입니다.',
+			// termsOfService: 'http://example.com/terms/',
+			// contact: {
+			// 	name: 'API Support',
+			// 	url: 'http://example.com/support',
+			// 	email: 'support@example.com'
+			// },
+			// license: {
+			// 	name: 'Apache 2.0',
+			// 	url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+			// }
 		},
 		servers: [
 			{
