@@ -20,6 +20,8 @@ app.get('/', redoc({
 	specUrl: '/swagger.json',
 }))
 
+//
+
 // OpenAPI 스펙을 JSON 형식으로 제공
 app.get('/swagger.json', (req, res) => {
 	res.json(swaggerDocs)
