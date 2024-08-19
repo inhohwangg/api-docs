@@ -9,7 +9,7 @@ app.use(routes)
 
 // Redoc 를 사용하여 API 문서화 제공
 app.get('/api-docs', redoc({
-	title: 'My API Docs',
+	title: 'API Docs',
 	specUrl: '/swagger.json',
 }))
 
