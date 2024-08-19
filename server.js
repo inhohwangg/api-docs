@@ -2,10 +2,12 @@ const express = require('express')
 const redoc = require('redoc-express')
 const swaggerDocs = require('./swaggerDocs'); // OpenAPI 스펙 불러오기
 const app = express()
+const webhook = require('./webhook.js')
 
 // 라우트
 const routes = require('./routes/index.js')
 app.use(routes)
+app.use('/api/webhook', webhook);
 
 // Redoc 를 사용하여 API 문서화 제공
 app.get('/', redoc({
