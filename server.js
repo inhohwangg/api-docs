@@ -8,7 +8,7 @@ const routes = require('./routes/index.js')
 app.use(routes)
 
 // Redoc 를 사용하여 API 문서화 제공
-app.get('/api-docs', redoc({
+app.get('/', redoc({
 	title: 'API Docs',
 	specUrl: '/swagger.json',
 }))
