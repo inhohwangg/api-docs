@@ -3,6 +3,11 @@ const redoc = require('redoc-express')
 const swaggerDocs = require('./swaggerDocs'); // OpenAPI 스펙 불러오기
 const app = express()
 const webhook = require('./webhook.js')
+const bodyParser = require('body-parser');
+
+// body-parser 미들웨어 설정
+app.use(bodyParser.json());  // JSON 형식의 본문을 파싱
+app.use(bodyParser.urlencoded({ extended: true }));  // URL-encoded 형식의 본문을 파싱
 
 // 라우트
 const routes = require('./routes/index.js')
