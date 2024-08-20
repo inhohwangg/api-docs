@@ -23,9 +23,6 @@ const router = express.Router();
  *               password:
  *                 type: string
  *                 description: 비밀번호
- *               role:
- *                 type: string
- *                 description: 사용자 권한
   *     responses:
  *       201:
  *         description: 사용자 생성 완료
