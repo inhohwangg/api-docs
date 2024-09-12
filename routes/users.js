@@ -246,6 +246,52 @@ const router = express.Router();
 
 /**
  * @swagger
+ * /api/shop/users/email/check:
+ *   get:
+ *     summary: 이메일 중복 검사
+ *     tags: [사용자]
+ *     parameters:
+ *      - in: path
+ *        name: email
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: 검사할 email 주소
+  *     responses:
+ *       200:
+ *         description: 이메일 조회 완료
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: "사용 가능한 이메일입니다."
+ *     responses:
+ *       400:
+ *         description: 중복된 이메일
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 400
+ *                 message:
+ *                   type: string
+ *                   example: "중복된 이메일입니다."
+ *                 content:
+ *                   type: string
+ *                   example: "이메일을 다시 확인해주세요."
+ */
+
+/**
+ * @swagger
  * /api/shop/users/email/{_id}:
  *   put:
  *     summary: 사용자 이메일 수정
