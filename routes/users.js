@@ -81,7 +81,7 @@ const router = express.Router();
  *           schema:
  *             type: object
  *             properties:
- *               username:
+ *               email:
  *                 type: string
  *                 description: 아이디
  *               password:
