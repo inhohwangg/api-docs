@@ -271,23 +271,7 @@ const router = express.Router();
  *                 message:
  *                   type: string
  *                   example: "사용 가능한 이메일입니다."
- *     responses:
- *       400:
- *         description: 중복된 이메일
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 statusCode:
- *                   type: integer
- *                   example: 400
- *                 message:
- *                   type: string
- *                   example: "중복된 이메일입니다."
- *                 content:
- *                   type: string
- *                   example: "이메일을 다시 확인해주세요."
+
  */
 
 /**
